@@ -1,0 +1,15 @@
+/* Variables CSS */
+:root {
+  --primary-color: #6c5ce7;
+  --primary-light: #a29bfe;
+  --secondary-color: #00cec9;
+  --accent-color: #fdcb6e;
+  --dark-color: #2d3436;
+  --light-color: #f9f9f9;
+  --success-color: #00b894;
+  --danger-color: #ff7675;
+  --gray-light: #dfe6e9;
+  --gray-dark: #636e72;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}

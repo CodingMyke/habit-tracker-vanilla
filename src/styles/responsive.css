@@ -1,0 +1,72 @@
+/* Responsive CSS */
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-item span {
+    display: none;
+  }
+
+  .menu-item i {
+    margin-right: 0;
+    font-size: 20px;
+  }
+
+  .motivation-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .quote {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .user-profile {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .habit-item {
+    flex-wrap: wrap;
+  }
+
+  .habit-streak {
+    margin: 10px 0;
+  }
+
+  .habit-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .add-btn {
+    width: 100%;
+  }
+}

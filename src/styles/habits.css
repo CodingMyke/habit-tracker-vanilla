@@ -1,0 +1,187 @@
+/* Habits CSS */
+.habits-section {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  flex: 1;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.clear-all-btn {
+  color: var(--danger-color);
+  font-size: 16px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.clear-all-btn:hover {
+  background-color: rgba(255, 118, 117, 0.1);
+}
+
+.add-habit-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.add-habit-btn:hover {
+  transform: scale(1.05);
+  background-color: var(--primary-light);
+}
+
+.habits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.habits-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.habits-container::-webkit-scrollbar-track {
+  background: var(--gray-light);
+  border-radius: 10px;
+}
+
+.habits-container::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--light-color);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.habit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.habit-check {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.habit-check:checked {
+  background-color: var(--primary-color);
+}
+
+.habit-check:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.habit-name {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.habit-streak {
+  display: flex;
+  align-items: center;
+  background-color: #fff3e0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #ff9800;
+  font-weight: 600;
+  margin: 0 15px;
+}
+
+.habit-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.habit-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.edit-btn {
+  color: var(--secondary-color);
+}
+
+.delete-btn {
+  color: var(--danger-color);
+}
+
+.habit-actions button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.completed .habit-name {
+  text-decoration: line-through;
+  color: var(--gray-dark);
+}
+
+.empty-habits-message {
+  text-align: center;
+  padding: 30px;
+  color: var(--gray-dark);
+}
+
+.empty-habits-message p {
+  font-size: 16px;
+}

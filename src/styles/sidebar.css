@@ -1,0 +1,62 @@
+/* Sidebar CSS */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-light)
+  );
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: var(--accent-color);
+}
+
+.logo h1 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.menu-item i {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.menu-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}

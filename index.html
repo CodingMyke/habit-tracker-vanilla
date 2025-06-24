@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Flow</title>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="src/styles/reset.css">
+  <link rel="stylesheet" href="src/styles/variables.css">
+  <link rel="stylesheet" href="src/styles/layout.css">
+  <link rel="stylesheet" href="src/styles/sidebar.css">
+  <link rel="stylesheet" href="src/styles/header.css">
+  <link rel="stylesheet" href="src/styles/habits.css">
+  <link rel="stylesheet" href="src/styles/progress.css">
+  <link rel="stylesheet" href="src/styles/modal.css">
+  <link rel="stylesheet" href="src/styles/responsive.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="logo">
+        <i class="fas fa-bolt"></i>
+        <h1>Habit<span>Flow</span></h1>
+      </div>
+      <nav class="menu">
+        <div class="menu-item active">
+          <i class="fas fa-home"></i>
+          <span>Dashboard</span>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-chart-line"></i>
+          <span>Statistiche</span>
+        </div>
+        <div class="menu-item">
+          <i class="fas fa-cog"></i>
+          <span>Impostazioni</span>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="header">
+        <div class="date-display">
+          <h2 id="current-date">Oggi</h2>
+          <p id="current-day">Caricamento...</p>
+        </div>
+        <div class="user-profile">
+          <div class="avatar">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+      </header>
+
+      <section class="habits-section">
+        <header class="section-header">
+          <h2>Le tue abitudini</h2>
+          <div class="header-actions">
+            <button id="clear-all-btn" class="clear-all-btn" title="Rimuovi tutte le abitudini">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+            <button class="add-habit-btn" id="show-add-modal">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="habits-container" id="habits-list">
+          <!-- Habits will be added here dynamically -->
+        </div>
+      </section>
+
+      <section class="motivation-card">
+        <div class="quote">
+          <i class="fas fa-quote-left"></i>
+          <p>"Le abitudini formano il carattere, e il carattere determina il destino."</p>
+        </div>
+        <div class="progress-summary">
+          <div class="progress-circle">
+            <div class="progress-bar-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text">
+              <span id="progress-percentage">0%</span>
+            </div>
+          </div>
+          <div class="progress-info">
+            <h3>Inizia oggi!</h3>
+            <p>Aggiungi la tua prima abitudine</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal per aggiungere/modificare abitudine -->
+  <dialog class="modal-overlay" id="habit-modal">
+    <div class="modal">
+      <header class="modal-header">
+        <h3 id="modal-title">Aggiungi nuova abitudine</h3>
+        <button class="close-modal" id="close-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+      <form class="modal-body">
+        <div class="form-group">
+          <label for="habit-input">Nome dell'abitudine</label>
+          <input type="text" id="habit-input" placeholder="Es. Leggere 20 pagine">
+          <div class="error-message" id="habit-error"></div>
+        </div>
+        <input type="hidden" id="edit-habit-id" value="">
+      </form>
+      <footer class="modal-footer">
+        <button type="button" class="cancel-btn" id="cancel-btn">Annulla</button>
+        <button type="button" class="add-btn" id="save-habit-btn">Salva</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <script src="src/main.ts"></script>
+</body>
+
+</html>
